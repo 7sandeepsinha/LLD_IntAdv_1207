@@ -1,4 +1,4 @@
-package school;
+package accessModifiers.school;
 
 public class Student {
     int marks; // default or package private

@@ -1,4 +1,4 @@
-package work;
+package accessModifiers.work;
 
 public class Office {
     public String companyName;

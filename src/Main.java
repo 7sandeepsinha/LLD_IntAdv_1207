@@ -1,4 +1,4 @@
-import school.Student;
+import accessModifiers.school.Student;
 
 public class Main extends Student{ // Inheritance
     public static void main(String[] args) {
