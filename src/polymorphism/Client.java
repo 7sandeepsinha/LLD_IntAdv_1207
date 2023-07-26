@@ -7,6 +7,12 @@ import java.util.List;
 
 public class Client {
     public static void main(String[] args) {
+
+            Vehicle demoVehicle = new ICECar();
+
+            ICECar demoIceCar = new ICECar();
+            Vehicle IceVehicle = demoIceCar;
+
 //        System.out.println("Hello World");
 //        System.out.println(1);
 //        System.out.println(true);
@@ -38,7 +44,7 @@ public class Client {
         ICECar mahindra = new ICECar();
         ElectricCar tata = new ElectricCar();
         ElectricCar tesla = new ElectricCar();
-        vehicles.add(mahindra);
+        vehicles.add(mahindra); // internally upcasts mahindra[ICECar type] object to vehicle reference variable
         vehicles.add(maruti);
         vehicles.add(tata);
         vehicles.add(tesla);

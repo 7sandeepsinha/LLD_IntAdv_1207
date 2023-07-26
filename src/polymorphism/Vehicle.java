@@ -14,3 +14,5 @@ public class Vehicle {
         System.out.println("Starting media via 3.5 MM jack");
     }
 }
+
+// break -> 8:20 AM -> 8 mins
