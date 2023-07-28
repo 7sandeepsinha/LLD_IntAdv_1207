@@ -1,4 +1,4 @@
-package multiThreading;
+package multiThreading.multiThreadingDemo;
 
 public class Adder implements Runnable {
     private int x;

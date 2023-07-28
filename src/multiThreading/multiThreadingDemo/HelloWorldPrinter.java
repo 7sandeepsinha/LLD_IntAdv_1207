@@ -1,4 +1,4 @@
-package multiThreading;
+package multiThreading.multiThreadingDemo;
 
 public class HelloWorldPrinter implements Runnable{
     @Override
