@@ -1,4 +1,4 @@
-import accessModifiers.school.Student;
+import oopsConcept.accessModifiers.school.Student;
 
 public class Main extends Student{ // Inheritance
     public static void main(String[] args) {
@@ -14,6 +14,6 @@ public class Main extends Student{ // Inheritance
         main.name = "Student name";
         Student s = new Student();
         // s.name = "name";
-        // main.address = ""; -> even after inheritance, private is not accessible
+        // main.address = ""; -> even after oopsConcept.inheritance, private is not accessible
     }
 }
