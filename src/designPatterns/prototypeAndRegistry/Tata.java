@@ -1,6 +1,6 @@
 package designPatterns.prototypeAndRegistry;
 
-public class Tata implements ICar {
+public class Tata implements ICar<Tata> {
     private String modelName;
     private int engineSize;
     private int noOfWheels;
@@ -18,7 +18,7 @@ public class Tata implements ICar {
     }
 
     @Override
-    public ICar clone() {
+    public Tata clone() {
         return null;
     }
 }

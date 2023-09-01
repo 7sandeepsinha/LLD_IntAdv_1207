@@ -1,5 +1,5 @@
 package designPatterns.prototypeAndRegistry;
 
-public interface ICar {
-    ICar clone();
+public interface ICar<T> {
+    T clone();
 }

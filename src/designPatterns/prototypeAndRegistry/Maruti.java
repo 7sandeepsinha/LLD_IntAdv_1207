@@ -1,6 +1,6 @@
 package designPatterns.prototypeAndRegistry;
 
-public class Maruti implements ICar{
+public class Maruti implements ICar<Maruti> {
     private String modelName;
     private int engineSize;
     private int noOfWheels;
@@ -17,8 +17,16 @@ public class Maruti implements ICar{
         this(m.modelName, m.engineSize, m.noOfWheels, m.serialNumber);
     }
 
+    public Maruti() {
+    }
+
     @Override
-    public ICar clone() {
-        return null;
+    public Maruti clone() {
+        Maruti m = new Maruti();
+        m.engineSize = this.engineSize;
+        m.modelName = this.modelName;
+        m.noOfWheels = this.noOfWheels;
+        m.serialNumber = this.serialNumber;
+        return m;
     }
 }

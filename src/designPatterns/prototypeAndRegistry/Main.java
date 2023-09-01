@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
+        RegistryStudent registryStudent = new RegistryStudent();
         // starting a new batch -> 100 students
         // create 1 enrollment at a time, and pass all the details
         // 2 -> create 100 enrollments with the common data, and later on add individual attribute values
@@ -17,6 +18,15 @@ public class Main {
             studentList.add(s.clone());
         }
 
+        Student aug23 = new Student(0,"",0,"Aug23","LLD","BE",2023,"Naman",2023,"Razorpay",70);
+        Student may23 = new Student(0,"",0,"May23","DSA","FS",2023,"Mohit",2023,"Razorpay",70);
+        registryStudent.addToRegistry(aug23.getBatchName(), aug23);
+        registryStudent.addToRegistry(may23.getBatchName(), may23);
+
+        Student yasiAug23 = registryStudent.getFromRegistry("Aug23").clone();
+        yasiAug23.setId(1);
+        yasiAug23.setName("Yasi");
+        yasiAug23.setPsp(99);
     }
 
     public static Student getClone(Student s){
@@ -40,20 +50,4 @@ public class Main {
 //        return s1;
         return s.clone();
     }
-
-    public static ICar getCarClone(ICar c){
-        // Using deep copy constructor will not help in scenarios where we have parent class/interfaces -> upcasting
-//        if(c instanceof Tata){
-//            return new Tata((Tata)c);
-//        } else {
-//            return new Maruti((Maruti)c);
-//        }
-//        return c.clone();
-        return null;
-    }
-
-    public static Tata getTataClone(Tata t){
-        return new Tata(t);
-    }
 }
-// break : 7 mins -> 8:49 AM
