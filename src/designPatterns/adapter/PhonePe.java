@@ -1,8 +1,5 @@
 package designPatterns.adapter;
 
-import designPatterns.adapter.banks.ICICIBankAPI;
-import designPatterns.adapter.banks.YesBankAPI;
-
 public class PhonePe {
 
     private BankAPIAdapter bankAPIAdapter;

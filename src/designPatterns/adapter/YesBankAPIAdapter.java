@@ -1,6 +1,6 @@
 package designPatterns.adapter;
 
-import designPatterns.adapter.banks.YesBankAPI;
+import designPatterns.adapter.thirdPartyBank.YesBankAPI;
 
 public class YesBankAPIAdapter implements BankAPIAdapter{
 

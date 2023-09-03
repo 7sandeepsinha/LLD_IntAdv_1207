@@ -1,7 +1,7 @@
 package designPatterns.adapter;
 
-import designPatterns.adapter.banks.BankAccountDetails;
-import designPatterns.adapter.banks.ICICIBankAPI;
+import designPatterns.adapter.thirdPartyBank.BankAccountDetails;
+import designPatterns.adapter.thirdPartyBank.ICICIBankAPI;
 
 public class ICICIBankAPIAdapter implements BankAPIAdapter{
 

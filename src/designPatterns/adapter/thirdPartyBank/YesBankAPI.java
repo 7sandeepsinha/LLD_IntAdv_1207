@@ -1,4 +1,4 @@
-package designPatterns.adapter.banks;
+package designPatterns.adapter.thirdPartyBank;
 
 public class YesBankAPI {
     public float balance(String userBankAccountId){

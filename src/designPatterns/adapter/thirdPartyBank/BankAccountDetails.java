@@ -1,4 +1,4 @@
-package designPatterns.adapter.banks;
+package designPatterns.adapter.thirdPartyBank;
 
 public class BankAccountDetails {
     private String userName;
