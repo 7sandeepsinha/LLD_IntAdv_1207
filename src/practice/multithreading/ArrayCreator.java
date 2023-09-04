@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Callable;
 
-public class ArrayCreator implements Callable {
+public class ArrayCreator implements Callable<List<Integer>> {
 
     int n;
     List<Integer> list;
@@ -14,9 +14,9 @@ public class ArrayCreator implements Callable {
        // list = new ArrayList<>();
     }
     @Override
-    public Object call() throws Exception {
+    public List<Integer> call() throws Exception {
         list = new ArrayList<>();
-        for(int i =1; i<=n;i++){
+        for(int i =1; i<=n; i++){
             list.add(i);
         }
         System.out.println("Thread name : "+ Thread.currentThread().getName());
