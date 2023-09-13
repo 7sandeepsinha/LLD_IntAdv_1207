@@ -69,60 +69,60 @@ public class Student {
         private Address address;
 
 
-        public Builder setId(int id) {
+        public Builder id(int id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = name;
             return this;
 
         }
 
-        public Builder setAge(int age) {
+        public Builder age(int age) {
             this.age = age;
             return this;
 
         }
 
-        public Builder setEmail(String email) {
+        public Builder email(String email) {
             this.email = email;
             return this;
 
         }
 
-        public Builder setPhoneNo(String phoneNo) {
+        public Builder phoneNo(String phoneNo) {
             this.phoneNo = phoneNo;
             return this;
 
         }
 
-        public Builder setUniversityName(String universityName) {
+        public Builder universityName(String universityName) {
             this.universityName = universityName;
             return this;
 
         }
 
-        public Builder setGradYear(int gradYear) {
+        public Builder gradYear(int gradYear) {
             this.gradYear = gradYear;
             return this;
 
         }
 
-        public Builder setPsp(double psp) {
+        public Builder psp(double psp) {
             this.psp = psp;
             return this;
 
         }
 
-        public Builder setBatchName(String batchName) {
+        public Builder batchName(String batchName) {
             this.batchName = batchName;
             return this;
 
         }
 
-        public Builder setAddress(Address address) {
+        public Builder address(Address address) {
             this.address = address;
             return this;
         }

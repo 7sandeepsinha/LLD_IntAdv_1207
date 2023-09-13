@@ -8,16 +8,16 @@ public class Main {
         address.setCountry("India");
 
         Student student = Student.builder()
-                .setAge(18)
-                .setBatchName("Scaler 2023")
-                .setEmail("abc@123.com")
-                .setGradYear(2010)
-                .setId(1234)
-                .setName("Dipanshu Munjal")
-                .setPhoneNo("1234567890")
-                .setPsp(35.23)
-                .setUniversityName("VIT Chennai")
-                .setAddress(address)
+                .age(18)
+                .batchName("Scaler 2023")
+                .email("abc@123.com")
+                .gradYear(2010)
+                .id(1234)
+                .name("Dipanshu Munjal")
+                .phoneNo("1234567890")
+                .psp(35.23)
+                .universityName("VIT Chennai")
+                .address(address)
                 .build();
 
         address = student.getAddress();
@@ -40,5 +40,9 @@ public class Main {
 * YOUR BUILDER PATTERN is ready and now, you can create a Student object from client class
 * Eg : Student.builder().setName().......setId().build();
 *
+*
+*
 * NOTE - for mutable objects inside Student class, you should always return a deep copy in its getter to maintain immutability
+*
+* NOTE - for builder setters - we don't put set, coz it doesn't have any getters. Enhances readability
 * */
