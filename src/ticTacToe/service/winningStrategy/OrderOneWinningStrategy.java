@@ -30,23 +30,6 @@ public class OrderOneWinningStrategy implements WinningStrategy{
         }
     }
 
-    public boolean isTopLeftDiagonalCell(int row, int col){
-        return row==col;
-    }
-
-    public boolean isTopRightDiagonalCell(int row, int col){
-        return (row+col) == (dimension-1);
-    }
-
-
-
-    public boolean isCornerCell(int row, int col){
-        // [0,0]  [0,dimen-1], [dimen-1,0], [dimen-1, dimen-1]
-        if(row == 0 || row == dimension-1)
-            return col==0 || col==dimension-1;
-        return false;
-    }
-
     @Override
     public Player checkWinner(Board board, Move lastMove) {
         Player player = lastMove.getPlayer();
@@ -67,7 +50,22 @@ public class OrderOneWinningStrategy implements WinningStrategy{
         return null;
     }
 
-    public boolean checkRowWin(int row, char symbol){
+    private boolean isTopLeftDiagonalCell(int row, int col){
+        return row==col;
+    }
+
+    private boolean isTopRightDiagonalCell(int row, int col){
+        return (row+col) == (dimension-1);
+    }
+
+    private boolean isCornerCell(int row, int col){
+        // [0,0]  [0,dimen-1], [dimen-1,0], [dimen-1, dimen-1]
+        if(row == 0 || row == dimension-1)
+            return col==0 || col==dimension-1;
+        return false;
+    }
+
+    private boolean checkRowWin(int row, char symbol){
         // if the symbol is not existing, insert in map
         rowHashMaps.get(row).putIfAbsent(symbol, 0);
         //for every insertion of symbol update the count
@@ -78,7 +76,7 @@ public class OrderOneWinningStrategy implements WinningStrategy{
         return rowHashMaps.get(row).get(symbol) == dimension;
     }
 
-    public boolean checkColumnWin(int col, char symbol){
+    private boolean checkColumnWin(int col, char symbol){
         // if the symbol is not existing, insert in map
         colHashMaps.get(col).putIfAbsent(symbol, 0);
         //for every insertion of symbol update the count
@@ -89,7 +87,7 @@ public class OrderOneWinningStrategy implements WinningStrategy{
         return colHashMaps.get(col).get(symbol) == dimension;
     }
 
-    public boolean checkTopRightDiagonalWin(char symbol){
+    private boolean checkTopRightDiagonalWin(char symbol){
         // if the symbol is not existing, insert in map
         topRightHashMap.putIfAbsent(symbol, 0);
         //for every insertion of symbol update the count
@@ -100,7 +98,7 @@ public class OrderOneWinningStrategy implements WinningStrategy{
         return topRightHashMap.get(symbol) == dimension;
     }
 
-    public boolean checkTopLeftDiagonalWin(char symbol){
+    private boolean checkTopLeftDiagonalWin(char symbol){
         // if the symbol is not existing, insert in map
         topLeftHashMap.putIfAbsent(symbol, 0);
         //for every insertion of symbol update the count
@@ -111,7 +109,7 @@ public class OrderOneWinningStrategy implements WinningStrategy{
         return topLeftHashMap.get(symbol) == dimension;
     }
 
-    public boolean checkCornerWin(char symbol){
+    private boolean checkCornerWin(char symbol){
         // if the symbol is not existing, insert in map
         cornerHashMap.putIfAbsent(symbol, 0);
         //for every insertion of symbol update the count

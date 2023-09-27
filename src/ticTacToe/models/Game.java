@@ -4,6 +4,7 @@ import ticTacToe.exception.DuplicateSymbolException;
 import ticTacToe.exception.InvalidBoardSizeException;
 import ticTacToe.exception.InvalidBotCountException;
 import ticTacToe.exception.InvalidNumberOfPlayersException;
+import ticTacToe.service.winningStrategy.WinningStrategy;
 
 import java.util.ArrayList;
 import java.util.HashSet;
