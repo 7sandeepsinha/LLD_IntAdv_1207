@@ -8,6 +8,11 @@ public class Move {
         this.cell = new Cell(row, col);
     }
 
+    public Move(int row, int col, Player player) {
+        this.cell = new Cell(row, col);
+        this.player = player;
+    }
+
     public Player getPlayer() {
         return player;
     }
