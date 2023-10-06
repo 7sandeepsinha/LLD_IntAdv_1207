@@ -8,3 +8,5 @@ import parkingLot.models.constants.VehicleType;
 public interface SlotAllocationStrategy {
     ParkingSlot findParkingSlot(VehicleType vehicleType, ParkingLot parkingLot, Gate entryGate);
 }
+
+//8:08 AM -> break
