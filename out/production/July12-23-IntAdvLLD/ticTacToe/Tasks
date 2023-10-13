@@ -1,0 +1,4 @@
+1. Input validation for move
+2. If user gives any wrong input, example - String instead of number, game should not end
+3. Undo logic - controller
+4. Replay logic - controller

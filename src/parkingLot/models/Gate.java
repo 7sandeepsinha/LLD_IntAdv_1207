@@ -9,7 +9,7 @@ public class Gate extends BaseModel{
     private int floorNumber;
     private int parkingLotId;
     private GateStatus gateStatus;
-    private String gateNumber;
+    private int gateNumber;
 
     public String getOperator() {
         return operator;
@@ -51,11 +51,11 @@ public class Gate extends BaseModel{
         this.gateStatus = gateStatus;
     }
 
-    public String getGateNumber() {
+    public int getGateNumber() {
         return gateNumber;
     }
 
-    public void setGateNumber(String gateNumber) {
+    public void setGateNumber(int gateNumber) {
         this.gateNumber = gateNumber;
     }
 }
