@@ -62,6 +62,7 @@ public class InitServiceImpl implements InitService {
             entryGate.setGateType(GateType.ENTRY);
             entryGate.setOperator("Rahul");
             entryGate.setParkingLotId(1);
+            entryGate.setFloorNumber(i);
             gateRepository.put(entryGate);
 
             Gate exitGate = new Gate();
@@ -71,6 +72,7 @@ public class InitServiceImpl implements InitService {
             exitGate.setGateType(GateType.EXIT);
             exitGate.setOperator("Ram");
             exitGate.setParkingLotId(1);
+            entryGate.setFloorNumber(i);
             gateRepository.put(exitGate);
 
             List<Gate> gates = new ArrayList<>(Arrays.asList(entryGate,exitGate));
